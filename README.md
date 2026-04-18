@@ -13,7 +13,7 @@ handled by the script.
 
 ```bash
 GH_PAT=<paste-fine-grained-pat> bash <(curl -fsSL \
-  https://raw.githubusercontent.com/develop-vireo/claude-bootstrap/main/bootstrap.sh)
+  https://raw.githubusercontent.com/develop-vireo/bootstrap/main/bootstrap.sh)
 source ~/.bashrc
 cc /?
 ```

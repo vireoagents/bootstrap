@@ -1,0 +1,37 @@
+name: Tech debt
+description: Cleanup, refactor, or accumulated debt — usually agent-claimable
+title: "[tech-debt] "
+labels: ["type:tech-debt", "status:ready", "agent:auto", "risk:low"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Defaults assume **agent-claimable, low risk**.
+        If this touches data/billing/auth/prod infra → switch to `risk:high` and `agent:human`.
+  - type: textarea
+    id: current
+    attributes:
+      label: Current state
+      description: What's there today, with file:line references where possible.
+    validations:
+      required: true
+  - type: textarea
+    id: desired
+    attributes:
+      label: Desired state
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: refs
+    attributes:
+      label: References
+      description: Related commits, files, prior issues.

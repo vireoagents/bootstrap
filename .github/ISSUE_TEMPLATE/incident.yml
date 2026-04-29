@@ -1,0 +1,41 @@
+name: Incident
+description: Active incident or post-mortem follow-up
+title: "[incident] "
+labels: ["type:incident", "priority:P0", "status:in-progress", "risk:high", "agent:human"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Incident — human attention required.** Agents must not auto-claim.
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Who/what is affected, how badly, since when?
+    validations:
+      required: true
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Timeline
+      placeholder: |
+        - HH:MM UTC — detected
+        - HH:MM UTC — mitigated
+        - HH:MM UTC — root-caused
+    validations:
+      required: true
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Mitigation / current status
+    validations:
+      required: true
+  - type: textarea
+    id: rca
+    attributes:
+      label: Root cause (when known)
+  - type: textarea
+    id: followups
+    attributes:
+      label: Follow-ups
+      description: Action items. Each should become its own issue once incident is closed.

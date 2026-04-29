@@ -1,0 +1,36 @@
+name: Security
+description: Vulnerability, hardening, or threat-model gap
+title: "[security] "
+labels: ["type:security", "status:triage", "agent:human", "risk:high"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Security issue — human review required.** Do not auto-claim.
+        If this is an actively exploitable vulnerability, also open an incident.
+  - type: textarea
+    id: vuln
+    attributes:
+      label: Vulnerability / weakness
+      description: What's the issue? Be specific about the threat model.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Confidentiality / Integrity / Availability — which, and how bad?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction (if applicable)
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Proposed mitigation
+  - type: textarea
+    id: refs
+    attributes:
+      label: References

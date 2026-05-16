@@ -3,7 +3,7 @@
 #
 # Usage:
 #   GH_PAT=<fine-grained-pat> bash <(curl -fsSL \
-#     https://raw.githubusercontent.com/develop-vireo/bootstrap/main/bootstrap.sh)
+#     https://raw.githubusercontent.com/vireoagents/bootstrap/main/bootstrap.sh)
 #
 # Flags:
 #   --dry-run / --diff-only   show proposed changes as diffs, write nothing
@@ -12,7 +12,7 @@
 #
 # Environment:
 #   GH_PAT           fine-grained PAT (required)
-#   CONTEXTS_REPO    default: develop-vireo/claude-contexts
+#   CONTEXTS_REPO    default: vireoagents/claude-contexts
 #   CONTEXTS_DIR     default: $HOME/claude-contexts
 #
 # Idempotent. Never silently overwrites existing PATs or repos with mismatched
@@ -40,9 +40,9 @@ done
 
 [ "$DRY_RUN" = 1 ] && echo "[bootstrap] DRY-RUN — no writes, no clones, no network mutation"
 
-: "${GH_PAT:?Set GH_PAT to a fine-grained PAT with read access to develop-vireo/claude-contexts plus the project repos it lists}"
+: "${GH_PAT:?Set GH_PAT to a fine-grained PAT with read access to vireoagents/claude-contexts plus the project repos it lists}"
 
-CONTEXTS_REPO="${CONTEXTS_REPO:-develop-vireo/claude-contexts}"
+CONTEXTS_REPO="${CONTEXTS_REPO:-vireoagents/claude-contexts}"
 CONTEXTS_DIR="${CONTEXTS_DIR:-$HOME/claude-contexts}"
 
 # --- Summary tracking ---------------------------------------------------------
